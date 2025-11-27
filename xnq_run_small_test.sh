@@ -1,4 +1,10 @@
+set -x
+
 export RAY_DEDUP_LOGS=0
+
+export VLLM_ATTENTION_BACKEND=XFORMERS
+
+export http_proxy=127.0.0.1:7890 https_proxy=127.0.0.1:7890
 
 math_train_path=./data/math/train.parquet
 math_test_path=./data/math/test.parquet

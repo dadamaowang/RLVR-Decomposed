@@ -118,7 +118,6 @@ def main_task(config):
         del role_worker_mapping[Role.RefPolicy]
         del mapping[Role.RefPolicy]
 
-
     # we should adopt a multi-source reward function here
     # - for rule-based rm, we directly call a reward score
     # - for model-based rm, we call a model
@@ -162,6 +161,7 @@ def main_task(config):
                             reward_fn=reward_fn,
                             val_reward_fn=val_reward_fn)
     trainer.init_workers()
+
     trainer.fit()
 
 

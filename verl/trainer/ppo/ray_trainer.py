@@ -1054,6 +1054,9 @@ class RayPPOTrainer(object):
         last_val_metrics = None
 
         advantage = self.config.algorithm.advantage
+
+        breakpoint()
+
         for epoch in tqdm(range(self.config.trainer.total_epochs)):
             print("-" * 30 + f'Epoch: {epoch}' + "-" * 30)
             for batch_dict in self.train_dataloader:
@@ -1061,6 +1064,8 @@ class RayPPOTrainer(object):
                 timing_raw = {}
 
                 batch: DataProto = DataProto.from_single_dict(batch_dict)
+
+                breakpoint()
 
                 # pop those keys for generation
                 if 'multi_modal_inputs' in batch.non_tensor_batch.keys():

@@ -1,9 +1,9 @@
 export RAY_DEDUP_LOGS=0
 
-math_train_path=./data/math/train.parquet
-math_test_path=./data/math/test.parquet
-aime2025_test_path=./data/aime2025/test.parquet
-amc23_test_path=./data/amc23/test.parquet
+math_train_path=./mini_data/math/train.parquet
+math_test_path=./mini_data/math/test.parquet
+aime2025_test_path=./mini_data/aime2025/test.parquet
+amc23_test_path=./mini_data/amc23/test.parquet
 
 train_files="['$math_train_path']"
 test_files="['$math_test_path', '$aime2025_test_path', '$amc23_test_path']"

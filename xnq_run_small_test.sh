@@ -49,7 +49,7 @@ python3 -m verl.trainer.main_ppo \
     actor_rollout_ref.rollout.gpu_memory_utilization=0.7 \
     actor_rollout_ref.rollout.n=2 \
     actor_rollout_ref.ref.fsdp_config.param_offload=True \
-    trainer.experiment_name="small_test_1130" \
+    trainer.experiment_name="small_test_1205" \
     algorithm.kl_ctrl.kl_coef=$kl_coef \
     trainer.critic_warmup=0 \
     trainer.logger=['wandb'] \
@@ -57,7 +57,6 @@ python3 -m verl.trainer.main_ppo \
     trainer.n_gpus_per_node=2 \
     +trainer.val_before_train=True \
     trainer.nnodes=1 \
-    trainer.save_freq=7 \
-    trainer.test_freq=7 \
+    trainer.test_freq=10 \
     trainer.total_epochs=20 $@
     # algorithm.positive_advantage_weight=$positive_advantage_weight \
